@@ -24,6 +24,7 @@ const routes: Routes = [
   { path: 'fun', component: FunComponent },
   { path: 'contact', component: ContactComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'youtube', loadChildren: () => import('./application/youtube/youtube.module').then(m => m.YoutubeModule) },
   { path: '**', component: Error404Component },
 ];
 
