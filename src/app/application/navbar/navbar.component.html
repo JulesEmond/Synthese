@@ -1,0 +1,50 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container-fluid">
+            <a href="https://github.com/JulesEmond" class="navbar-brand"> <i class="fas fa-globe-americas text-light fa-2x px-2"> Jules</i></a>
+            
+            <button class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="nav">
+                <ul class="navbar-nav align-self-end" id="nav">
+                    <li class="nav-item dropdown d-none">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="navbar-toggler-icon"></span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a routerLink="home" class="nav-link font-weight-bold text-capitalize text-light px-3">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown" data-toggle="dropdown">
+                        <a class="nav-link font-weight-bold text-capitalize text-light dropdown px-3">Tutoriel</a>
+                        <div class="dropdown-menu">
+                            <a [routerLink]="['/tutoriel',1]" class="dropdown-item">Mini-tutoriel Angular 10</a>
+                            <a [routerLink]="['/tutoriel',2]" class="dropdown-item">Mini-tutoriel Crud</a>
+                            <a [routerLink]="['/tutoriel',3]" class="dropdown-item">Mini-tutoriel des relations</a>
+                            <a [routerLink]="['/tutoriel',4]" class="dropdown-item">Mini-tutoriel</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a [routerLink]="['/formulaire']" class="nav-link font-weight-bold text-capitalize text-light px-3">Formulaire</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a [routerLink]="['/crud']" class="nav-link font-weight-bold text-capitalize text-light px-3">Crud</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a [routerLink]="['/fun']" class="nav-link font-weight-bold text-capitalize text-light px-3">Fun</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a [routerLink]="['/contact']" class="nav-link font-weight-bold text-capitalize text-light px-3">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

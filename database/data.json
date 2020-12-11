@@ -1,0 +1,57 @@
+{
+  "myApi": [
+    {
+      "name": "René-Test",
+      "password": "gegegege",
+      "emailOffers": true,
+      "interfaceStyle": "light",
+      "subscriptionType": "Lifetime",
+      "notes": "Le p'tit dernier",
+      "id": 5
+    },
+    {
+      "name": "jrjjrjrjr",
+      "password": "jrjrjrj",
+      "interfaceStyle": "dark",
+      "subscriptionType": "Monthly",
+      "notes": "rjrjjr",
+      "id": 6
+    },
+    {
+      "name": "ufijhgvk",
+      "password": "^poiuy",
+      "emailOffers": false,
+      "interfaceStyle": "dark",
+      "subscriptionType": "Lifetime",
+      "notes": "ih",
+      "id": 7
+    },
+    {
+      "name": "Jean-Test",
+      "password": "test",
+      "emailOffers": false,
+      "interfaceStyle": "dark",
+      "subscriptionType": "Annual",
+      "notes": "Je suis un test!",
+      "id": 8
+    },
+    {
+      "name": "Pierre-Test",
+      "password": "oui",
+      "emailOffers": true,
+      "interfaceStyle": "medium",
+      "subscriptionType": "Monthly",
+      "notes": "Le frere de Jean",
+      "id": 9
+    },
+    {
+      "name": "Luc-Test",
+      "password": "non",
+      "emailOffers": false,
+      "interfaceStyle": "light",
+      "subscriptionType": "Lifetime",
+      "notes": "Le cousin des deux autres",
+      "id": 10
+    }
+  ]
+}

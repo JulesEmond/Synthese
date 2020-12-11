@@ -1,0 +1,24 @@
+<h2>L'id récupéré est : {{myParametre}}</h2>
+
+<ng-container [ngSwitch]="myParametre">
+<ng-container *ngSwitchCase="1">
+    <div>
+        <h1>Mini-Tutoriel Angular 10</h1>
+    </div>
+</ng-container>
+<ng-container *ngSwitchCase="2">
+    <div>
+        <h1>Mini-Tutoriel Crud</h1>
+    </div>
+</ng-container>
+<ng-container *ngSwitchCase="3">
+    <div>
+        <h1>Mini-Tutoriel Relations</h1>
+    </div>
+</ng-container>
+<ng-container *ngSwitchDefault>
+    <div>
+        <h1>Mini-Tutoriel à venir</h1>
+    </div>
+</ng-container>
+</ng-container>
