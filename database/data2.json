@@ -1,0 +1,18 @@
+{
+  "myApi": [
+    {
+      "name": "alpha 1",
+      "type": "Classe F",
+      "constellation": "Orion",
+      "description": "Naine blanche",
+      "id": 1
+    },
+    {
+      "name": "delta 6",
+      "type": "Classe K",
+      "constellation": "Taurus",
+      "description": "Supernova",
+      "id": 2
+    }
+  ]
+}

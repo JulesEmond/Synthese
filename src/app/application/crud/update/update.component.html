@@ -1,72 +1,47 @@
-<div class="container">
-    <h2>User Settings</h2>
+
+
+<div class="container py-5">
+  <h2>Change Your choice</h2>
     <form [formGroup]="updateUserForm" (ngSubmit)= "updateUser()">
         <div *ngIf="validMessage != ''">
             <h3 class="has-info">{{validMessage}}</h3>
         </div>
 
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input id="name" formControlName="name" class="form-control" [(ngModel)]="user.name"/>
-      <div *ngIf="!formUpdate.name.valid && (formUpdate.name.dirty || formUpdate.name.touched)">
-        <div [hidden]="!formUpdate.name.errors.required">Le nom est obligatoire</div>
-        <div [hidden]="!formUpdate.name.errors.minlength">Le nom doit être composé un minumu de 4 caractères</div>
-      </div>
-      </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" formControlName="name" class="form-control" [(ngModel)]="etoile.name" />
+        <div *ngIf="!formUpdate.name.valid && (formUpdate.name.dirty || formUpdate.name.touched)">
+          <div [hidden]="!formUpdate.name.errors.required">Le nom de l'étoile est obligatoire</div>
+          <div [hidden]="!formUpdate.name.errors.minlength">Le nom de l'étoile doit être composé d'un minumum de 4 caractères</div>
+        </div>
+        </div>
   
-
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" formControlName="password" class="form-control" [(ngModel)]="user.password"/>
-      </div>
-
-      <div class="form-check form-group">
-        <input class="form-check-input" type="checkbox"
-                id="emailOffers" formControlName="emailOffers" [(ngModel)]="user.emailOffers">
-        <label class="form-check-label" for="emailOffers">
-          Email Special Offers
-        </label>
-      </div>
-
-      <p>User Interface Style</p>
-      <div class="form-group">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" formControlName="interfaceStyle" 
-                 id="lightInterface" value="light" checked [(ngModel)]="user.interfaceStyle">
-          <label class="form-check-label" for="lightInterface">
-            Light
-          </label>
+        <div class="form-group">
+          <label for="type">Type</label>
+          <select class="form-control" id="type" formControlName="type" [(ngModel)]="etoile.type">
+            <option>Classe O</option>
+            <option>Classe B</option>
+            <option>Classe A</option>
+            <option>Classe F</option>
+            <option>Classe G</option>
+            <option>Classe K</option>
+            <option>Classe M</option>
+          </select>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" formControlName="interfaceStyle" 
-                 id="mediumInterface" value="medium" [(ngModel)]="user.interfaceStyle">
-          <label class="form-check-label" for="mediumInterface">
-            Medium
-          </label>
+  
+        <div class="form-group">
+          <label for="constellation">Constellation</label>
+          <input id="constellation" formControlName="constellation" class="form-control" [(ngModel)]="etoile.constellation"/>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" formControlName="interfaceStyle" 
-                  id="darkInterface" value="dark" [(ngModel)]="user.interfaceStyle">
-          <label class="form-check-label" for="darkInterface">
-            Dark
-          </label>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="subscriptionType">Subscription Type</label>
-        <select class="form-control" id="subscriptionType" formControlName="subscriptionType" [(ngModel)]="user.subscriptionType">
-          <option>Monthly</option>
-          <option>Annual</option>
-          <option>Lifetime</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="notes">Notes</label>
-        <textarea id="notes" formControlName="notes" class="form-control" 
-                  rows="3" [(ngModel)]="user.notes"></textarea>
-      </div>      
+  
+  
+  
+  
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" formControlName="description" class="form-control" 
+                    rows="3" [(ngModel)]="etoile.description"></textarea>
+        </div>            
 
       <div class="form-group">
         <label class="col-md-4 control-label" for="submit"></label>
@@ -75,10 +50,5 @@
           <a [routerLink]="[ '/crud']" id="cancel" name="cancel" class="btn btn-secondary ml-3">Cancel</a>
         </div>
       </div>
-    </form>
-
-    
-    <hr>
-    <!-- <h3>{{form1.value | json}}</h3> --> 
-    
+    </form> 
   </div>

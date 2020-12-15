@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { User } from '../models/user';
-import { UserService } from '../services/user.service';
+import { ActivatedRoute } from '@angular/router';
+import { Etoile } from '../models/etoile';
+import { EtoileService } from '../services/etoile.service';
 
 @Component({
   selector: 'app-reactive',
@@ -10,38 +10,33 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./read-one.component.css'],
 })
 export class ReadOneComponent implements OnInit {
-  readUserForm: FormGroup;
+  readStarForm: FormGroup;
   id: number;
-  user: User;
+  etoile: Etoile;
   validMessage: string = '';
 
-  constructor(
-    private service: UserService,
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
+  constructor(private service: EtoileService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     this.service.findById(this.id).subscribe(
       (res) => {
-        this.user = res;
+        this.etoile = res;
       },
       (err) => {
         console.log(err);
       }
     );
-    this.readUserForm = new FormGroup({
+    this.readStarForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      password: new FormControl('', Validators.required),
-      emailOffers: new FormControl('', Validators.required),
-      interfaceStyle: new FormControl('', Validators.required),
-      subscriptionType: new FormControl('', Validators.required),
-      notes: new FormControl('', Validators.required),
+      type: new FormControl('', Validators.required),
+      constellation: new FormControl('', Validators.required),
+      distance: new FormControl('', Validators.required),
+      description: new FormControl('', Validators.required),
     });
   }
 
   get formUpdate() {
-    return this.readUserForm.controls;
+    return this.readStarForm.controls;
   }
 }

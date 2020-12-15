@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid py-5">
     <h1>Exemple Crud</h1>
 
 
@@ -10,10 +10,9 @@
         <tr>
         <th scope="col">ID</th>
         <th scope="col">Name</th>
-        <th scope="col">Email Offers</th>
-        <th scope="col">Interface Style</th>
-        <th scope="col">Subscription Type</th>
-        <th scope="col">Notes</th>
+        <th scope="col">Type</th>
+        <th scope="col">Constellation</th>
+        <th scope="col">Description</th>
         <th width="430px">Operation</th>
     </tr>
     </thead>
@@ -21,15 +20,13 @@
         <tr *ngFor="let item of listUsers; let i = index">
             <td>{{item.id}}</td>
             <td>{{item.name}}</td>
-            <td>{{item.emailOffers}}</td>
-            <td>{{item.interfaceStyle}}</td>
-            <td>{{item.subscriptionType}}</td>
-            <td>{{item.notes}}</td>
+            <td>{{item.type}}</td>
+            <td>{{item.constellation}}</td>
+            <td>{{item.description}}</td>
             <td>
                 <a [routerLink]="[ '/crud/read/', item.id]" class="btn btn-info mr-2">Afficher</a>
                 <a [routerLink]="[ '/crud/update/', item.id]" class="btn btn-primary mr-2">Update</a>
                 <button type="button" (click)="delete(item.id)" class="btn btn-danger mr-2">Delete</button>
-                <button type="button" (click)="delete2(item.id, i)" class="btn btn-danger">Delete2</button>
             </td>
         </tr>
     </tbody>

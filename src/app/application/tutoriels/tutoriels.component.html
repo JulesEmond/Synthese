@@ -1,23 +1,67 @@
-<h2>L'id récupéré est : {{myParametre}}</h2>
-
 <ng-container [ngSwitch]="myParametre">
 <ng-container *ngSwitchCase="1">
-    <div>
+    <div class="container-fluid py-5">
         <h1>Mini-Tutoriel Angular 10</h1>
+        <i class="fab fa-angular text-danger fa-10x p-5"></i>
+        <div class="explication">
+            <h3 class="mt-3">Qu'est-ce qu'Angular 10?</h3>
+            <p class="ml-5"> Angular 10 est en fait la neuvième version de la deuxième plateforme Angular. 
+                Pourquoi deux plateforme? Parce que la première fonctionne grâce à Javascript et la seconde Typescript.
+                Pour faire simple, Angular est un framework qui aide à la création de Single Page Application (SPA).</p>
+            <h3 class="mt-3">Exemple de commandes :</h3>
+            <ul class="list-inline ml-5">
+                <li class="list-item mb-2"><span>ng new nom-projet</span> : Sert à créer un nouveau projet Angular dans le dossier nom-projet.</li>
+                <li class="list-item mb-2"><span>ng g c nom-composant</span> : Sert à créer un nouveau composant nommé nom-composant.</li>
+                <li class="list-item mb-2"><span>ng g s nom-service</span> : Sert à créer un nouveau service nommé nom-service.</li>
+                <li class="list-item mb-2"><span>ng g module nom-module</span> : Sert à créer un nouveau module nommé nom-module.</li>
+                <li class="list-item mb-2"><span>ng serve -o</span> : Sert à démarrer et lancer le projet Angular sur le Web (en localhost).</li>
+            </ul>
+        </div>
     </div>
 </ng-container>
 <ng-container *ngSwitchCase="2">
-    <div>
-        <h1>Mini-Tutoriel Crud</h1>
+    <div class="container-fluid py-5">
+        <h1>Mini-Tutoriel sur le Crud</h1>
+        <i class="fas fa-database text-info fa-10x p-5"></i>
+        <div class="explication">
+            <h3 class="mt-3">Qu'est-ce qu'un CRUD?</h3>
+            <p class="ml-5"> CRUD est un accronyme pour Create-Read-Update-Delete qui sont les quatres fonctions de base qui doivent être implémenté dans toute base de donnés.</p>
+            <h3 class="mt-3">Fonction de base du CRUD :</h3>
+            <ul class="list-inline ml-5">
+                <li class="list-item  mb-2"><span>CREATE</span> : Ajoute un objet dans la base de données. </li>
+                <li class="list-item  mb-2"><span>READ</span> : Lit une partie des objets de la base de données qui peut être autant un seul objet ou l'entièreté des objets se trouvant dans cette dernière. </li>
+                <li class="list-item  mb-2"><span>UPDATE</span> : Modifie les données contenues dans un ou plusieurs objets de la base de données.</li>
+                <li class="list-item  mb-2"><span>DELETE</span> : Supprime un ou plusieurs objets de la base de données.</li>
+            </ul>
+        </div>
     </div>
 </ng-container>
 <ng-container *ngSwitchCase="3">
-    <div>
-        <h1>Mini-Tutoriel Relations</h1>
+    <div class="container-fluid py-5">
+        <h1>Mini-Tutoriel sur les Relations</h1>
+        <i class="fas fa-link text-dark fa-10x p-5"></i>
+        <div class="explication">
+            <h3 class="mt-3">Qu'est-ce qu'une relation?</h3>
+            <p class="ml-5"> Une relation est le lien qui lie deux objets ensemble dans une base de données.</p>
+            <h3 class="mt-3">Les types de relations :</h3>
+            <ul class="list-inline ml-5">
+                <li class="list-item  mb-2"><span>Héritage</span> : Désigne une relation parent-enfant. </li>
+                <li class="list-item  mb-2"><span>Implémentation</span> : Un des objets se sert de l'autre objet qui une interface ou un enum. </li>
+                <li class="list-item  mb-2"><span>Association</span> : Un objet se sert de l'autre.</li>
+                <li class="list-item  mb-2"><span>Composition</span> : Un objet fait nécessairement parti d'un autre.</li>
+                <li class="list-item  mb-2"><span>Aggrégation</span> : Un objet peut faire parti d'un autre.</li>
+            </ul>
+            <h3 class="mt-3">Les types d'associations :</h3>
+            <ul class="list-inline ml-5">
+                <li class="list-item  mb-2"><span>One To One</span> : Désigne une association où un objet est lié à un autre. </li>
+                <li class="list-item  mb-2"><span>One To Many</span> : Désigne une association où un objet est lié à plusieurs objets d'un autre type. </li>
+                <li class="list-item  mb-2"><span>Many To Many</span> : Désigne une association où plusieurs objets d'un type sont liés à plusieurs objets d'un autre type.</li>
+            </ul>
+        </div>
     </div>
 </ng-container>
 <ng-container *ngSwitchDefault>
-    <div>
+    <div class="container-fluid">
         <h1>Mini-Tutoriel à venir</h1>
     </div>
 </ng-container>

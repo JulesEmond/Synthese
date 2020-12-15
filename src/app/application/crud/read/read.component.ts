@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../models/user';
-import { UserService } from '../services/user.service';
+import { Etoile } from '../models/etoile';
+import { EtoileService } from '../services/etoile.service';
 
 @Component({
   selector: 'app-read',
@@ -8,9 +8,9 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./read.component.css'],
 })
 export class ReadComponent implements OnInit {
-  listUsers: Array<User>;
+  listUsers: Array<Etoile>;
 
-  constructor(private service: UserService) {}
+  constructor(private service: EtoileService) {}
 
   ngOnInit(): void {
     this.getAllEmployees();
@@ -27,20 +27,7 @@ export class ReadComponent implements OnInit {
     );
   }
 
-  public delete(id: number) {
-    if (window.confirm('Are you sure?')) {
-      this.service.deleteById(id).subscribe(
-        () => {
-          this.listUsers = this.listUsers.filter((record) => record.id !== id);
-        },
-        (err) => {
-          console.log(err);
-        }
-      );
-    }
-  }
-
-  public delete2(id: number, i: any) {
+  public delete(id: number, i: any) {
     if (window.confirm('Are you sure?')) {
       this.service.deleteById(id).subscribe(
         () => {

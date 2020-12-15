@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { User } from '../models/user';
-import { UserService } from '../services/user.service';
+import { Etoile } from '../models/etoile';
+import { EtoileService } from '../services/etoile.service';
 
 @Component({
   selector: 'app-reactive',
@@ -12,11 +12,11 @@ import { UserService } from '../services/user.service';
 export class UpdateComponent implements OnInit {
   updateUserForm: FormGroup;
   id: number;
-  user: User;
+  etoile: Etoile;
   validMessage: string = '';
 
   constructor(
-    private service: UserService,
+    private service: EtoileService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
@@ -25,7 +25,7 @@ export class UpdateComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.service.findById(this.id).subscribe(
       (res) => {
-        this.user = res;
+        this.etoile = res;
       },
       (err) => {
         console.log(err);
@@ -33,11 +33,10 @@ export class UpdateComponent implements OnInit {
     );
     this.updateUserForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      password: new FormControl('', Validators.required),
-      emailOffers: new FormControl('', Validators.required),
-      interfaceStyle: new FormControl('', Validators.required),
-      subscriptionType: new FormControl('', Validators.required),
-      notes: new FormControl('', Validators.required),
+      type: new FormControl('', Validators.required),
+      constellation: new FormControl('', Validators.required),
+      distance: new FormControl('', Validators.required),
+      description: new FormControl('', Validators.required),
     });
   }
 

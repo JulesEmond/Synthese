@@ -1,0 +1,10 @@
+.container-fluid {
+  text-align: center;
+}
+.explication {
+  text-align: left;
+}
+
+span {
+  font-weight: bold;
+}

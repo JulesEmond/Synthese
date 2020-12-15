@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GenericService } from './generic.service';
-import { User } from '../models/user';
+import { Etoile } from '../models/etoile';
 
 @Injectable({
   providedIn: 'root',
 })
-export class UserService extends GenericService<User, number> {
+export class EtoileService extends GenericService<Etoile, number> {
   constructor(http: HttpClient) {
     super(http, 'http://localhost:3004/myApi');
   }

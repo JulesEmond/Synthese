@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from '../models/user';
-import { UserService } from '../services/user.service';
+import { Etoile } from '../models/etoile';
+import { EtoileService } from '../services/etoile.service';
 
 @Component({
   selector: 'app-reactive',
@@ -12,17 +12,16 @@ import { UserService } from '../services/user.service';
 export class CreateComponent implements OnInit {
   userForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(4)]),
-    password: new FormControl('', Validators.required),
-    emailOffers: new FormControl('', Validators.required),
-    interfaceStyle: new FormControl('', Validators.required),
-    subscriptionType: new FormControl('', Validators.required),
-    notes: new FormControl('', Validators.required),
+    type: new FormControl('', Validators.required),
+    constellation: new FormControl('', Validators.required),
+    distance: new FormControl('', Validators.required),
+    description: new FormControl('', Validators.required),
   });
 
-  user: User;
+  user: Etoile;
   validMessage: string = '';
 
-  constructor(private service: UserService, private router: Router) {}
+  constructor(private service: EtoileService, private router: Router) {}
 
   ngOnInit(): void {}
 
