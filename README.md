@@ -60,3 +60,4 @@ La page Error404 est une propriété de ColorLib
 
 * Créativité
 
+L'URL utilisé pour lire le fichier JSON est : http://localhost:3004/myApi
